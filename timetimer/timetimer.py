@@ -1,11 +1,30 @@
+from _typeshed import Self
 from pygame.locals import *
 import pygame
 import sys
 
+class View:
+    def __init__(self,screen):
+        self.screen = screen
+    
+    def draw(self):
+        return
+
+class Controller:
+    def __init__(self):
+        None
+
+class Main:
+    def __init__(self):
+        self.WIN_WEIGHT = 500
+        self.WIN_HEIGHT = 250
+
+
+
 def main():
     pygame.init()    # Pygameを初期化
     screen = pygame.display.set_mode((500, 250))    # 画面を作成.return Surface
-    pygame.display.set_caption("Pygame sample app")    # タイトルを作成
+    pygame.display.set_caption("Timetimer")    # タイトルを作成
     
     time_bar_weight = 300
     passed_min = 0 #１分を何回繰り返したか記録
